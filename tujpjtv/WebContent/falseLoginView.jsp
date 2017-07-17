@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Buget Travel Maker loginView.jsp</title>
+<title>loginView.jsp</title>
 </head>
 <body>
 <p>----------------------------Main-----------------------------
@@ -19,7 +19,5 @@ Login info is wrong, try again.
 <p>----------------------------Ref-----------------------------
 <p><a href="/tujpjtv/myPageView.jsp">Go back to "myPageView.jsp". </a>
 <p>
-<form method="post" action="LogoutController.do">
-<input type="submit" value = "Logout" > Logout.
 </body>
 </html>

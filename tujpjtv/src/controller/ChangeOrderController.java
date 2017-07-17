@@ -30,7 +30,7 @@ public class ChangeOrderController extends HttpServlet {
 
 		//get data from JSP
 		HttpSession session = req.getSession();
-		String orderid = (String) session.getAttribute("orderid");
+		String orderid = req.getParameter("orderid");
 		String numofseats = req.getParameter("numofseats");
 				
 		//DAO
