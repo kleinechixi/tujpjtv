@@ -1,0 +1,36 @@
+#myinfo table
+
+create table travel.myinfo (useridnum varchar(20),userid varchar(10) not null unique,password varchar(10) not null,email varchar(30),firstname varchar(10),lastname varchar(10),sex varchar(10),nationality varchar(20),birthday varchar(10),address varchar(50),phone varchar(20),primary key(useridnum));
+
+insert into travel.myinfo (useridnum,userid,password,email,firstname,lastname,sex,nationality,birthday,address,phone) values ('u20170717160401','chiharu','passw0rd','kleinechixi@gmail.com','chiharu','oda','female','Japan','99999999' ,'Ikebukuro','999-9999-9999');
+
+select * from travel.myinfo;
+
+#transsupply table
+create table travel.supply (shipnum varchar(5) primary key,type varchar(10),date varchar(10),origin varchar(10),destination varchar(10),availseats varchar(10) not null);
+insert into travel.SUPPLY (shipnum,type,date,origin,destination,availseats) values ('ftj1','jet','2017/08/04','Tokyo','Ogasawara','30'); 
+insert into travel.SUPPLY (shipnum,type,date,origin,destination,availseats) values ('ftf2','ferry','2017/08/11','Tokyo','Ogasawara','50'); 
+insert into travel.SUPPLY (shipnum,type,date,origin,destination,availseats) values ('ftj3','jet','2017/08/18','Tokyo','Ogasawara','30'); 
+insert into travel.SUPPLY (shipnum,type,date,origin,destination,availseats) values ('ftf4','ferry','2017/08/25','Tokyo','Ogasawara','50'); 
+insert into travel.SUPPLY (shipnum,type,date,origin,destination,availseats) values ('fgj1','jet','2017/08/05','Ogasawara','Tokyo','30'); 
+insert into travel.SUPPLY (shipnum,type,date,origin,destination,availseats) values ('fgf2','ferry','2017/08/12','Ogasawara','Tokyo','50'); 
+insert into travel.SUPPLY (shipnum,type,date,origin,destination,availseats) values ('fgj3','jet','2017/08/19','Ogasawara','Tokyo','30'); 
+insert into travel.SUPPLY (shipnum,type,date,origin,destination,availseats) values ('fgf4','ferry','2017/08/26','Ogasawara','Tokyo','50');
+select * from travel.supply;
+
+#transdemand table (booked)
+create table travel.demand (orderid varchar(40), shipnum varchar(5) not null, useridnum varchar(20) not null, numofseats varchar(10) not null, primary key(orderid));
+insert into travel.demand (shipnum,useridnum,numofseats) values ('ftj1','u01','1');
+insert into travel.demand (shipnum,useridnum,numofseats) values ('fgj1','u01','2');
+insert into travel.demand (shipnum,useridnum,numofseats) values ('ftf2','u02','3');
+insert into travel.demand (shipnum,useridnum,numofseats) values ('fgf2','u02','4');
+select * from travel.demand;
+
+#to see booked one
+select * from travel.SUPPLY,travel.demand where travel.SUPPLY.SHIPNUM = travel.DEMAND.SHIPNUM and travel.DEMAND.USERIDNUM = 'u01';
+
+
+
+#pj2 sakuraweb userinfo
+
+

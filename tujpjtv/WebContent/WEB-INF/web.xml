@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>tujpjtv</display-name>
+  <welcome-file-list>
+    <welcome-file>loginView.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <servlet>
+  	<servlet-name>SignupController</servlet-name>
+  	<servlet-class>controller.SignupController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>SignupController</servlet-name>
+  	<url-pattern>/SignupController.do</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>ChangeMyInfoController</servlet-name>
+  	<servlet-class>controller.ChangeMyInfoController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>ChangeMyInfoController</servlet-name>
+  	<url-pattern>/ChangeMyInfoController.do</url-pattern>
+  </servlet-mapping>
+    
+  <servlet>
+  	<servlet-name>LoginController</servlet-name>
+  	<servlet-class>controller.LoginController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>LoginController</servlet-name>
+  	<url-pattern>/LoginController.do</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+  	<servlet-name>LogoutController</servlet-name>
+  	<servlet-class>controller.LogoutController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>LogoutController</servlet-name>
+  	<url-pattern>/LogoutController.do</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>MyInfoController</servlet-name>
+  	<servlet-class>controller.MyInfoController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>MyInfoController</servlet-name>
+  	<url-pattern>/MyInfoController.do</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+  	<servlet-name>FindSupplyController</servlet-name>
+  	<servlet-class>controller.FindSupplyController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>FindSupplyController</servlet-name>
+  	<url-pattern>/FindSupplyController.do</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+  	<servlet-name>FindOrderController</servlet-name>
+  	<servlet-class>controller.FindOrderController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>FindOrderController</servlet-name>
+  	<url-pattern>/FindOrderController.do</url-pattern>
+  </servlet-mapping>
+
+   <servlet>
+  	<servlet-name>OrderController</servlet-name>
+  	<servlet-class>controller.OrderController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>OrderController</servlet-name>
+  	<url-pattern>/OrderController.do</url-pattern>
+  </servlet-mapping>  
+
+  <servlet>
+  	<servlet-name>CancelOrderController</servlet-name>
+  	<servlet-class>controller.CancelOrderController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>CancelOrderController</servlet-name>
+  	<url-pattern>/CancelOrderController.do</url-pattern>
+  </servlet-mapping>  
+
+  <servlet>
+  	<servlet-name>ChangeOrderController</servlet-name>
+  	<servlet-class>controller.ChangeOrderController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>ChangeOrderController</servlet-name>
+  	<url-pattern>/ChangeOrderController.do</url-pattern>
+  </servlet-mapping>    
+</web-app>
